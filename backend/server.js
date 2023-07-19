@@ -1,22 +1,3 @@
-import express from "express";
-import bodyParser from "body-parser";
-import {
-    initializeDatabase,
-    readTeachers,
-    readTeacherInfo,
-    addTeacher,
-    deleteTeacher,
-    updateTeacher,
-    readStudents,
-    readStudentInfo,
-    addStudent,
-    deleteStudent,
-    updateStudent,
-} from "./database.js";
-
-
-
-
 const express = require ("express");
 
 const {
@@ -34,9 +15,7 @@ const {
 } = require ("./database.js");
 
 const app = express();
-
 const bodyParser = require  ("body-parser");
-
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
