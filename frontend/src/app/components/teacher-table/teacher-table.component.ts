@@ -60,8 +60,24 @@ export class TeacherTableComponent implements OnInit {
     })
   }
 
-  search(value) {
-    
+  search(value: string) {
+    let foundItems = [];
+  
+    if (value.trim().length <= 0) {
+      // If the search text is empty or whitespace, fetch the original teacher data.
+      this.getTeacherData();
+    } else {
+      // Convert the search text to lowercase for case-insensitive comparison.
+      const searchText = value.toLowerCase();
+  
+      // Filter the teacherData based on the teacher's name matching the search text.
+      foundItems = this.teacherData.filter((teacher) => {
+        return teacher[0].name.toLowerCase().includes(searchText);
+      });
+    }
+  
+    // Update the teacherData with the filtered results.
+    this.teacherData = foundItems;
   }
 
   deleteTeacher(itemid) {
