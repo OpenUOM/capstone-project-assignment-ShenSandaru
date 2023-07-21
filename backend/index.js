@@ -2,7 +2,7 @@
 
 const server  = require ("./server.js");
 
-/*
+
 if(process.env.NODE_ENV === "test"){
   server.listen(3000, () => {
     console.log(
@@ -12,7 +12,7 @@ if(process.env.NODE_ENV === "test"){
 }
 
 else{
- */
+
 
 
   server.listen(8080, function () {
@@ -21,4 +21,4 @@ else{
   );
 });
 
-//}
+}
