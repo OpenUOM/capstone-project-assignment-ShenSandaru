@@ -10,6 +10,7 @@ export class AppServiceService {
   readonly ROOT_URL;
 
   constructor(private http: HttpClient) {
+    
     if(environment.production == false){
       this.ROOT_URL = 'test'
     }else{
@@ -19,6 +20,7 @@ export class AppServiceService {
 
   initializeDB(){
     return this.http.get(`/${this.ROOT_URL}/dbinitialize`)
+    
   }
 
   getTeacherData(){
@@ -26,10 +28,12 @@ export class AppServiceService {
   }
 
   getStudentData(){
+    
     return this.http.get(`/${this.ROOT_URL}/listStudents`)
   }
 
   getOneStudentData(payload: Object){
+    
     return this.http.post(`/${this.ROOT_URL}/getStudentInfo`, payload)
   }
 
