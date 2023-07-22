@@ -27,8 +27,8 @@ const readTeachers = async () => {
     return new Promise((resolve, reject) => {
         knex_db
             .raw(sql)
-            .then((teacher) => {
-                resolve(teacher);
+            .then((teachers) => {
+                resolve(teachers);
             })
             .catch((error) => {
                 reject(error);
