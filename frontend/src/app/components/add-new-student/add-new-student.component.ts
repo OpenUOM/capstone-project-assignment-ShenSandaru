@@ -18,8 +18,8 @@ export class AddNewStudentComponent implements OnInit {
 
     const student = {
       
-      name : value.name,
       id : value.id,
+      name : value.name,
       age : value.age,
       hometown : value.Hometown
     }

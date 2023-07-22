@@ -24,11 +24,11 @@ test('Testing add students', async t => {
     
 
     const rowCount = await table.find('tr').count;
-    console.log("Row Count:", rowCount);
+    
 
 
     let tdText = await table.find('tr').nth(rowCount - 1).innerText;
     await t.expect(tdText).contains("Pasindu Basnayaka");
 
-    console.log("Table Row Text:", tdText); // Output the content of the table row to the console for debugging
+    
 });
