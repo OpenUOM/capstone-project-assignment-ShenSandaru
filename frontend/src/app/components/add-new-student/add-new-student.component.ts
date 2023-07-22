@@ -17,8 +17,9 @@ export class AddNewStudentComponent implements OnInit {
   createStudent(value){
 
     const student = {
-      id : value.id,
+      
       name : value.name,
+      id : value.id,
       age : value.age,
       hometown : value.Hometown
     }
