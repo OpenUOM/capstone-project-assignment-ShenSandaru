@@ -5,7 +5,7 @@ fixture`Testing Student UI`
 
     
 
-    .page`http://localhost:4200/student`
+    .page`http://localhost:4401/student`
 
 test('Testing add students', async t => {
 
